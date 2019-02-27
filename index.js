@@ -22,11 +22,18 @@
 //   }
 // }
 
-function User(name, email) {
-    this.name = name;
-    this.email = email;
+function BoardMember(name, homeState, training){
+  this.name = name;
+  this.homeState = homeState;
+  this.training = training;
 }
- 
+
+BoardMember.prototype.veto = function() {return "No, I must disagree"};
+BoardMember.prototype.approve = function() {return "You can do that!"};
+BoardMember.prototype.doCharity = function() {return "I like to help people."};
+Board
+
+
 User.prototype.sayHello = function() {
     console.log(`Hello everybody, my name is ${this.name}`);
 };
